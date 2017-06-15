@@ -1,0 +1,42 @@
+{
+  "name": "thingy52",
+  "version": "1.0.0",
+  "description": "Nordic Thingy:52 Node.js library example. Please see http://www.nordicsemi.com/thingy for the latest Nordic Thingy:52 news and software releases.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "noble-device": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NordicSemiconductor/Nordic-Thingy52-Nodejs.git"
+  },
+  "keywords": [
+    "Bluetooth",
+    "Thingy:52",
+    "Sensors",
+    "Temperature",
+    "Humididty",
+    "Pressure",
+    "Motion",
+    "Speaker",
+    "Microphone",
+    "Color",
+    "Light",
+    "Gas",
+    "Air",
+    "Quality"
+  ],
+  "author": "Nordic Semiconductor ASA",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/NordicSemiconductor/Nordic-Thingy52-Nodejs/issues"
+  },
+  "homepage": "http://www.nordicsemi.com/eng/Products/Nordic-Thingy-52"
+}
