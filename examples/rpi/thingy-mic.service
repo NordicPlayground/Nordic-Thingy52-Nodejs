@@ -1,0 +1,16 @@
+[Unit]
+Description=Thingy microphone service
+After=network.target ntpdate.service
+
+[Service]
+Environment=PATH=/usr/bin:/usr/local/sbin:/usr/local
+ExecStart=/usr/bin/node /home/pi/thingy-google-assistant/node_modules/thingy52/examples/microphone.js -d loopin
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+Alias=thingy-mic.service
