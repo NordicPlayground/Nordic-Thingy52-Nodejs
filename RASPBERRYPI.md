@@ -7,26 +7,31 @@ This library is using [noble-device](https://github.com/sandeepmistry/noble-devi
 
 ## Prerequisites
 1. A Raspberry Pi with built in Bluetooth or a Raspberry Pi and a Bluetooth USB dongle.
-> Note that the internet radio example might not work to well with the built in Bluetooth adapter due to bandwidth limitations. It is therefore recommended to use an external Bluetooth USB dongle when using this example.
+> Note that the internet radio and microphone example might not work to well with the built in Bluetooth adapter due to bandwidth limitations. It is therefore recommended to use an external Bluetooth USB dongle when using this example.
 
 2. The [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) operating system image.
 3. Git, Node.js, npm and noble-device.
 
-## Setup
+## Setup Raspbian
 1. [Install](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) Raspbian on your Raspberry Pi's SD card using [Etcher](https://etcher.io/).
 > To enable the SSH server on your Pi, make a new file called ssh without any extensions in the boot partition on the SD card.
 
 2. Insert the SD card and power up the Raspberry Pi. Then log in using the default username and password. It's higly recommended to change the default password using the `passwd` command.
-3. Update the package manger: `sudo apt-get update`.
-4. Install git: `sudo apt-get install git`
-5. Install Bluetooth dependencies: `sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev`
-6. Clone the repository: `git clone https://github.com/NordicSemiconductor/Nordic-Thingy52-Nodejs.git`
-7. Add the latest version of Node.js to package manager: `curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -`
-8. Install Node.js: `sudo apt-get install nodejs`
+3. Update the package manager: `sudo apt-get update`.
+4. Add the latest version of Node.js to package manager: `curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -`
+5. Install dependencies: `sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev git nodejs`
+
+## Install using GitHub
+1. Clone the repository: `git clone https://github.com/NordicSemiconductor/Nordic-Thingy52-Nodejs.git`
+2. Go into the Nordic-Thingy52-Nodejs folder. `cd /Nordic-Thingy52-Nodejs`
+3. Install [noble-device](https://github.com/sandeepmistry/noble-device): `npm install noble-device`
+4. Find examples `cd examples`.
+
+## Install using npm
+1. Install package: `npm install thingy52`
+2. Find examples `cd node_modules/thingy52/examples`.
 
 ## Run the examples
-1. Go into the Nordic-Thingy52-Nodejs folder. `cd /Nordic-Thingy52-Nodejs`
-2. Install [noble-device](https://github.com/sandeepmistry/noble-device): `npm install noble-device`
 3. Check if the example you want to run has other required npm packages by opening the example. As we can see below the radio.js script requires icecast, lame and util.
 ```javascript
 var Thingy = require('../index');

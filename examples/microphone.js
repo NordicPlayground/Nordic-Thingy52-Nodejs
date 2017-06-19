@@ -35,6 +35,7 @@ var connected_thingy;
 var thingy_id;
 var sound_device;
 var speaker;
+var button;
 
 /** Intel ADPCM step variation table */
 var INDEX_TABLE = [-1, -1, -1, -1, 2, 4, 6, 8, -1, -1, -1, -1, 2, 4, 6, 8,];
@@ -123,18 +124,43 @@ function adpcm_decode(adpcm) {
 function onButtonChange(state) {
     console.log('Button: ' + state);
 
+    button = state;
+
     if (state == 'Pressed')
     {
+        var led = {
+            r: 1,
+            g: 40,
+            b: 1
+        };
+
         connected_thingy.mic_enable(function(error) {
-            console.log('Microphone enabled! ' + error);
+            console.log('Microphone enabled! ' + ((error) ? error : ''));
         });
+
+        setTimeout(function() {
+            if (button == 'Pressed') {
+                connected_thingy.led_set(led, function(error) {
+                    console.log('LED change! ' + ((error) ? error : ''));
+                });
+            }
+        }, 1100);
     }
     else
     {
+        var led = {
+            color: 6,
+            intensity: 20,
+            delay: 3500
+        };
+
         connected_thingy.mic_disable(function(error) {
-            console.log('Microphone disabled! ' + error);
+            console.log('Microphone disabled! ' + ((error) ? error : ''));
         });
 
+        connected_thingy.led_breathe(led, function(error) {
+            console.log('LED change! ' + ((error) ? error : ''));
+        });
     }
 }
 
@@ -148,15 +174,22 @@ function onDiscover(thingy) {
 
   thingy.on('disconnect', function() {
     console.log('Disconnected!');
+    thingy.connectAndSetUp(function(error) {
+      connected_thingy = thingy;
+      console.log('Connected! ' + ((error) ? error : ''));
+      thingy.button_enable(function(error) {
+        console.log('Button enabled! ' + ((error) ? error : ''));
+      });
+    });
   });
 
   thingy.connectAndSetUp(function(error) {
     connected_thingy = thingy;
-    console.log('Connected! ' + error);
+    console.log('Connected! ' + ((error) ? error : ''));
     thingy.on('buttonNotif', onButtonChange);
     thingy.on('MicrophoneNotif', onMicData);
     thingy.button_enable(function(error) {
-      console.log('Button enabled! ' + error);
+      console.log('Button enabled! ' + ((error) ? error : ''));
     });
   });
 }
