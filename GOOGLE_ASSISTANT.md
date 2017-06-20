@@ -2,14 +2,14 @@
 Welcome to the Nordic Thingy:52 Node.js library example.
 Please see http://www.nordicsemi.com/thingy for the latest Nordic Thingy:52 news and software releases.
 
-See See [RASPBERRYPI.md](https://github.com/NordicSemiconductor/Nordic-Thingy52-Nodejs/blob/master/RASPBERRYPI.md) for how to set up Node.js and Thingy:52 library on the raspberry pi.
+See [RASPBERRYPI.md](https://github.com/NordicSemiconductor/Nordic-Thingy52-Nodejs/blob/master/RASPBERRYPI.md) for how to set up Node.js and Thingy:52 library on the raspberry pi.
 
 ## Prerequisites
 1. A Raspberry Pi with built in Bluetooth or a Raspberry Pi and a Bluetooth USB dongle.
 > Note that the internet radio and microphone example might not work to well with the built in Bluetooth adapter due to bandwidth limitations. It is therefore recommended to use an external Bluetooth USB dongle when using this example.
 
 2. The [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) operating system image.
-3. Git, Node.js, npm and noble-device.
+3. Git, Node.js, npm and [noble-device](https://github.com/sandeepmistry/noble-device).
 
 ## Installation
 1. [Install](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) Raspbian on your Raspberry Pi's SD card using [Etcher](https://etcher.io/).
@@ -63,7 +63,7 @@ google-oauthlib-tool --client-secrets /home/pi/thingy-google-assistant/client_se
 ```
 Replace client_secret_client-id.json with the file downloaded in step 10.
 
-12. Running google assistant and the michrophone script:
+12. Running google assistant and the microphone script:
 ```
 google-assistant-demo
 sudo node node_modules/thingy52/examples/microphone.js -d loopin
