@@ -80,20 +80,9 @@ function onEulerData(euler) {
 }
 
 function onRotationData(rotation) {
-    console.log('Rotation: matrix length in bytes ' + rotation.length);
+    console.log('Rotation: matrix:');
 
-    // 3x3 matrix
-    var rotation_matrix = [[], [], []];
-
-    var data_index = 0;
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
-            rotation_matrix[i][j] = rotation.readInt16LE(data_index);
-            data_index += 2
-        }
-    }
-
-    console.table(rotation_matrix);
+    console.table(rotation);
 }
 
 function onHeadingData(heading) {

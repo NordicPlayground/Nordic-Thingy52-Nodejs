@@ -76,28 +76,28 @@ function onButtonChange(state) {
     // Check to see which Tweet to tweet
     if (g_temperature > 30) {
       T.post('statuses/update', { status: 
-        `Damn its hot in here! Temperature is ${g_temperature}` }, 
+        `#NordicThingy says its hot in here! Temperature is ${g_temperature}` }, 
         function(err, data, response) {
         console.log(data)
       })
     }
     else if (g_co2 > 1000) {
       T.post('statuses/update', { status: 
-        `eCO2 level is ${g_co2}. Is that your breathe Im smelling?` }, 
+        `#NordicThingy air quality warning... eCO2 level is ${g_co2}.` }, 
         function(err, data, response) {
         console.log(data)
       })
     }
     else if (g_humidity > 70) {
       T.post('statuses/update', { status: 
-        `Where is all that humidity coming from? Humidity level is ${g_humidity}` }, 
+        `#NordicThingy - Where is all that humidity coming from? Humidity level is ${g_humidity}` }, 
         function(err, data, response) {
         console.log(data)
       })
     }
     else {
       T.post('statuses/update', { status: 
-        `Well that wasnt too interesting.. None of the sensors triggered at all.` }, 
+        `#NordicThingy - The environment readings are within normal limits` }, 
         function(err, data, response) {
         console.log(data)
       })
