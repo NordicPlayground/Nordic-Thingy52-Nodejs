@@ -1,6 +1,6 @@
 {
   "name": "thingy52",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Nordic Thingy:52 Node.js library example. Please see http://www.nordicsemi.com/thingy for the latest Nordic Thingy:52 news and software releases.",
   "main": "index.js",
   "directories": {
