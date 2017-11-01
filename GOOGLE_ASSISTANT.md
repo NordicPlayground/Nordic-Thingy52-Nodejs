@@ -2,7 +2,7 @@
 Welcome to the Nordic Thingy:52 Node.js library example.
 Please see http://www.nordicsemi.com/thingy for the latest Nordic Thingy:52 news and software releases.
 
-See [RASPBERRYPI.md](https://github.com/NordicSemiconductor/Nordic-Thingy52-Nodejs/blob/master/RASPBERRYPI.md) for how to set up Node.js and Thingy:52 library on the raspberry pi.
+See [RASPBERRYPI.md](https://github.com/NordicPlayground/Nordic-Thingy52-Nodejs/blob/master/RASPBERRYPI.md) for how to set up Node.js and Thingy:52 library on the raspberry pi.
 
 ## Prerequisites
 1. A Raspberry Pi with built in Bluetooth or a Raspberry Pi and a Bluetooth USB dongle.
