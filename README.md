@@ -6,9 +6,9 @@ Please see http://www.nordicsemi.com/thingy for the latest Nordic Thingy:52 news
 This library is using [noble-device](https://github.com/sandeepmistry/noble-device) and [noble](https://github.com/sandeepmistry/noble) to handle the Bluetooth connection.
 
 
-> See [RASPBERRYPI.md](https://github.com/NordicSemiconductor/Nordic-Thingy52-Nodejs/blob/master/RASPBERRYPI.md) for how to set it up on a Raspberry Pi running Raspbian.
+> See [RASPBERRYPI.md](https://github.com/NordicPlayground/Nordic-Thingy52-Nodejs/blob/master/RASPBERRYPI.md) for how to set it up on a Raspberry Pi running Raspbian.
 
-> See [GOOGLE_ASSISTANT.md](https://github.com/NordicSemiconductor/Nordic-Thingy52-Nodejs/blob/master/GOOGLE_ASSISTANT.md) for how to set it up on a Raspberry Pi running Raspbian and Google Assistant using the Thingy:52 as microphone input.
+> See [GOOGLE_ASSISTANT.md](https://github.com/NordicPlayground/Nordic-Thingy52-Nodejs/blob/master/GOOGLE_ASSISTANT.md) for how to set it up on a Raspberry Pi running Raspbian and Google Assistant using the Thingy:52 as microphone input.
 
 ## Prerequisites
 1. [Node.js](https://nodejs.org/en/) JavaScript runtime.

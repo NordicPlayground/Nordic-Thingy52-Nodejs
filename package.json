@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NordicSemiconductor/Nordic-Thingy52-Nodejs.git"
+    "url": "git+https://github.com/NordicPlayground/Nordic-Thingy52-Nodejs.git"
   },
   "keywords": [
     "Bluetooth",
@@ -36,7 +36,7 @@
   "author": "Nordic Semiconductor ASA",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/NordicSemiconductor/Nordic-Thingy52-Nodejs/issues"
+    "url": "https://github.com/NordicPlayground/Nordic-Thingy52-Nodejs/issues"
   },
   "homepage": "http://www.nordicsemi.com/eng/Products/Nordic-Thingy-52"
 }

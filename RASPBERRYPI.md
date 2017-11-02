@@ -22,7 +22,7 @@ This library is using [noble-device](https://github.com/sandeepmistry/noble-devi
 5. Install dependencies: `sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev git nodejs`
 
 ## Install using GitHub
-1. Clone the repository: `git clone https://github.com/NordicSemiconductor/Nordic-Thingy52-Nodejs.git`
+1. Clone the repository: `git clone https://github.com/NordicPlayground/Nordic-Thingy52-Nodejs.git`
 2. Go into the Nordic-Thingy52-Nodejs folder. `cd /Nordic-Thingy52-Nodejs`
 3. Install [noble-device](https://github.com/sandeepmistry/noble-device): `npm install noble-device`
 4. Find examples `cd examples`.
