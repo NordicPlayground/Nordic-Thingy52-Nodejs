@@ -1,5 +1,7 @@
 # Nordic Thingy:52 Node.js library
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/NordicPlayground/Nordic-Thingy52-Nodejs.svg)](https://greenkeeper.io/)
+
 Welcome to the Nordic Thingy:52 Node.js library example.
 Please see http://www.nordicsemi.com/thingy for the latest Nordic Thingy:52 news and software releases.
 
